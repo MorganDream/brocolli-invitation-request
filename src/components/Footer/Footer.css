@@ -1,0 +1,30 @@
+.footer {
+    background-color: #282c34;
+    font-size: 1.5vmin;
+    color: white;
+    height: 8vh;
+    border-top-style: solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
+    font-family: Chandas;
+    position:fixed;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+}
+
+.footer-inner {
+    position:relative;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-inner-text {
+    position: relative;
+    height: 50%;
+}

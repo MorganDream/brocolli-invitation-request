@@ -1,0 +1,11 @@
+.header {
+    background-color: #282c34;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    height: 8vh;
+    border-bottom-style: solid;
+    display: flex;
+    align-items: center;
+    padding-left: 10vw;
+    font-family: Chandas;
+}
