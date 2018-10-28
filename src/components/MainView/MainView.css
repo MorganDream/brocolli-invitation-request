@@ -1,0 +1,33 @@
+.main-view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 84vh;
+}
+
+.main-view-box {
+    height: 40%;
+    width: 50%;
+    margin-top: -20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main-view-box-caption {
+    font-size: 5vmin;
+    text-align: center;
+}
+
+.main-view-box-sub-caption {
+    font-size: 2vmin;
+    text-align: center;
+    color: gray;
+}
+
+.main-view-box-invite-button {
+    font-size: 3vmin;
+    border-radius: 1vmin;
+    border-width: thick;
+}

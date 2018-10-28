@@ -1,0 +1,35 @@
+.success-dialog {
+    width:100%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: white;
+}
+
+.success-dialog-description-container {
+    display: flex;
+    flex: 0.7;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.success-dialog-description {
+    width: 70%;
+    text-align: center;
+}
+
+.success-dialog-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0.3;
+}
+
+.success-dialog-button {
+    height: 4vh;
+    width:70%;
+    color: black;
+    font-size: 2vmin;
+}

@@ -1,0 +1,23 @@
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.input {
+    height: 4vh;
+    width:100%;
+}
+
+.input-group-invalid .input {
+    border-color: red;
+}
+
+.input-label{
+
+}
+
+.input-group-invalid .input-label {
+    background-color: red;
+    color: white;
+}

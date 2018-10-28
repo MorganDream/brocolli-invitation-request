@@ -1,0 +1,12 @@
+import keyMirror from 'key-mirror';
+
+export default keyMirror({
+  SHOW_REQUEST_INVITE_POPUP_REQUEST: null,
+  HIDE_REQUEST_INVITE_POPUP_REQUEST: null,
+
+  USER_INPUT_CHANGE: null,
+  REFRESH_ALL_VALIDATION: null,
+  REQUEST_INVITE_SEND_REQUEST: null,
+  REQUEST_INVITE_SEND_SUCCESS: null,
+  REQUEST_INVITE_SEND_FAIL: null,
+});

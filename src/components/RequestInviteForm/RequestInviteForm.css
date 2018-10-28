@@ -1,0 +1,51 @@
+.request-invite-form {
+    width:100%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: white;
+    padding-bottom: 5%;
+}
+
+.request-invite-input-group {
+    display: flex;
+    flex: 0.7;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.form-input {
+    width: 70%;
+}
+
+.request-invite-form-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0.3;
+}
+
+.request-invite-form-button {
+    height: 4vh;
+    width:70%;
+    color: black;
+    font-size: 2vmin;
+}
+
+.request-invite-form-button:disabled {
+    color: gray;
+}
+
+.server-error-log-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.server-error-log {
+    color: red;
+    width: 70%;
+    text-align: center;
+}

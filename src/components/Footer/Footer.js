@@ -6,8 +6,8 @@ class Footer extends React.Component {
     return (
       <footer className='footer'>
         <div className='footer-inner'>
-          <text className='footer-inner-text'>Make With ♥ in Melbourne.</text>
-          <text className='footer-inner-text'>© 2016 Broccolo & Co.  All rights reserved.</text>
+          <div className='footer-inner-text'>Make With ♥ in Melbourne.</div>
+          <div className='footer-inner-text'>© 2016 Broccolo & Co.  All rights reserved.</div>
         </div>
       </footer>
     )
