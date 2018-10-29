@@ -18,6 +18,6 @@
 }
 
 .input-group-invalid .input-label {
-    background-color: red;
-    color: white;
+    color: red;
+    font-size: 1vmin;
 }

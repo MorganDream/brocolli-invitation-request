@@ -84,8 +84,11 @@ class RequestInviteForm extends React.Component {
   }
 
   onInputAction = (value, name) => {
-    if (name!= 'emailConfirmation') {
-      this.props.actions.onUserInputChange(name,value)
+    if (name !== 'emailConfirmation') {
+      this.props.actions.onUserInputChange(name,value);
+      if (name === 'email' && this.props.userInputs.emailConfirmation.value !== '') {
+        this.props.actions.onUserInputChange('emailConfirmation', this.props.userInputs.emailConfirmation.value, value)
+      }
     } else {
       this.props.actions.onUserInputChange(name, value, this.props.userInputs.email.value)
     }

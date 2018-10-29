@@ -26,7 +26,7 @@ class Popup extends React.Component {
   }
 
   onClick_ = e => {
-    if(e.target == document.getElementById('popup')) {
+    if(e.target === document.getElementById('popup')) {
       this.props.onBlurAction();
     }
   }

@@ -1,4 +1,3 @@
-'use strict';
 import { STAGES } from "./initialState";
 import InitialState from "./initialState";
 
@@ -15,7 +14,7 @@ const initialState = new InitialState();
 
 
 export default function reducer(state = initialState, action) {
-  if (!(state instanceof InitialState) || (state == undefined)) return initialState.mergeDeep(state);
+  if (!(state instanceof InitialState) || (state === undefined)) return initialState.mergeDeep(state);
 
   switch (action.type) {
     case SHOW_REQUEST_INVITE_POPUP_REQUEST: {
@@ -38,7 +37,8 @@ export default function reducer(state = initialState, action) {
       return state.set('stage', STAGES.REGISTER_ERROR)
         .set('serverErrorMessage', action.payload);
     }
-  }
 
-  return state;
+    default:
+      return state;
+  }
 }

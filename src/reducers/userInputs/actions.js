@@ -1,10 +1,9 @@
-'use strict';
-
 import { requestInviteSendRequest, requestInviteSendSuccess, requestInviteSendFail } from "../stage/actions";
 
 const {
   USER_INPUT_CHANGE,
   REFRESH_ALL_VALIDATION,
+  USER_INPUT_REINIT,
 } = require('../../lib/constants').default;
 
 
@@ -55,13 +54,14 @@ function validate(inputType, value, emailValue) {
         {valid: true} :
         {valid: false, validationError: VALIDATION_ERROR.EMAIL_CONFIRMATION}
     }
+    default:
+      return {valid: true}
   }
-  return {valid: true};
 }
 
 function validateAll(name, email, emailConfirmation) {
   return new Promise((resolve, reject) => {
-    if (validateName(name) && validate(email) && validate(emailConfirmation)) {
+    if (validateName(name) && validateEmail(email) && validateEmailConfirmation(emailConfirmation, email)) {
       resolve();
     } else {
       reject({
@@ -144,5 +144,11 @@ export function onSendButtonClicked(name, email, emailConfirmation) {
         dispatch(refreshAllValidation(validationResults));
       }
     });
+  }
+}
+
+export function reInitInputs() {
+  return {
+    type: USER_INPUT_REINIT
   }
 }

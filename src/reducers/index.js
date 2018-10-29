@@ -1,5 +1,3 @@
-'use strict';
-
 import stageReducer from './stage/reducer';
 import userInputReducer from './userInputs/reducer';
 

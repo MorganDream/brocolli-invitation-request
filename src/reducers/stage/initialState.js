@@ -1,5 +1,3 @@
-'use strict';
-
 const { Record } = require('immutable');
 export const STAGES = {
   INITIAL: 0,

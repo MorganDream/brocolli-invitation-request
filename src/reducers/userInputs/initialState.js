@@ -1,5 +1,3 @@
-'use strict';
-
 const { Record } = require('immutable');
 
 const InputValidation = Record({

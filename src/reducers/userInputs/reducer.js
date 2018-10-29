@@ -1,9 +1,9 @@
-'use strict';
 import InitialState from "./initialState";
 
 const {
   USER_INPUT_CHANGE,
   REFRESH_ALL_VALIDATION,
+  USER_INPUT_REINIT
 } = require('../../lib/constants').default;
 
 
@@ -11,7 +11,7 @@ const initialState = new InitialState();
 
 
 export default function reducer(state = initialState, action) {
-  if (!(state instanceof InitialState) || (state == undefined)) return initialState.mergeDeep(state);
+  if (!(state instanceof InitialState) || (state === undefined)) return initialState.mergeDeep(state);
 
   switch (action.type) {
     case USER_INPUT_CHANGE: {
@@ -28,7 +28,12 @@ export default function reducer(state = initialState, action) {
         .setIn(['emailConfirmation', 'valid'], action.payload.emailConfirmation.valid)
         .setIn(['emailConfirmation', 'validationError'], action.payload.emailConfirmation.validationError)
     }
-  }
 
-  return state;
+    case USER_INPUT_REINIT: {
+      return initialState;
+    }
+
+    default:
+      return state;
+  }
 }

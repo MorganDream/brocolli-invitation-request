@@ -9,7 +9,8 @@ import RequestInviteForm from "./components/RequestInviteForm";
 import { connect } from "react-redux";
 import { STAGES } from './reducers/stage/initialState';
 import { bindActionCreators } from 'redux';
-import * as stageActions from './reducers/stage/actions';
+import { hideRequestInvitePopup } from './reducers/stage/actions';
+import { reInitInputs } from './reducers/userInputs/actions';
 import SuccessDialog from "./components/SuccessDialog";
 
 function mapStateToProps(state) {
@@ -20,7 +21,10 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators(stageActions, dispatch)
+    actions: bindActionCreators({
+      hideRequestInvitePopup: hideRequestInvitePopup,
+      reInitInputs: reInitInputs
+    }, dispatch)
   }
 }
 
@@ -53,6 +57,7 @@ class App extends React.Component {
 
   onBlurAction = () => {
     this.props.actions.hideRequestInvitePopup();
+    this.props.actions.reInitInputs();
   }
 }
 
